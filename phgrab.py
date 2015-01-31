@@ -39,9 +39,7 @@ if PROXY:
 
 for i in CLIPCODES:
     if not i.isdigit() or not len(i) == 10:
-        sys.exit(
-            "'\033[1m%s\033[0m' is not a valid ten-digit clipcode," % i,
-            "please check your input and try again.")
+        sys.exit("'\033[1m%s\033[0m' is not a valid ten-digit clipcode, please check your input and try again." % i)
 
 for i in CLIPCODES:
     soup = bs4.BeautifulSoup(
